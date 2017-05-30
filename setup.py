@@ -9,7 +9,7 @@ def main():
 
     setuptools.setup(
         name             = "suck_lord_kelvin_cock",
-        version          = "2017.05.30.1330",
+        version          = "2017.05.30.1414",
         description      = "template Python program",
         long_description = long_description(),
         url              = "https://github.com/wdbm/suck_lord_kelvin_cock",
@@ -23,7 +23,7 @@ def main():
                            "docopt"
                            ],
         scripts          = [
-                           "suck_lord_kelvin_cock"
+                           "suck_lord_kelvin_cock.py"
                            ],
         entry_points     = """
                            [console_scripts]
