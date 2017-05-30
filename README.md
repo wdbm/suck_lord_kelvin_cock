@@ -27,3 +27,5 @@ A help message is accessible in the following way:
 ```Bash
 suck_lord_kelvin_cock.py --help
 ```
+
+![](https://i.imgur.com/yNKzPh7.png)
