@@ -9,7 +9,7 @@ def main():
 
     setuptools.setup(
         name             = "suck_lord_kelvin_cock",
-        version          = "2017.05.30.1414",
+        version          = "2017.06.12.1315",
         description      = "template Python program",
         long_description = long_description(),
         url              = "https://github.com/wdbm/suck_lord_kelvin_cock",
