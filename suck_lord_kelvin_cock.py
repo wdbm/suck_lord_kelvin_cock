@@ -52,7 +52,7 @@ import socket
 import time
 
 name    = "suck_lord_kelvin_cock"
-version = "2017-06-12T1315Z"
+version = "2017-07-03T1029Z"
 
 def main(options):
 

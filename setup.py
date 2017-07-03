@@ -8,9 +8,9 @@ import setuptools
 def main():
 
     setuptools.setup(
-        name             = "suck_lord_kelvin_cock",
-        version          = "2017.06.12.1315",
-        description      = "template Python program",
+        name             = "slokc",
+        version          = "2017.07.03.1029",
+        description      = "Kelvin Building automated Wi-Fi login program",
         long_description = long_description(),
         url              = "https://github.com/wdbm/suck_lord_kelvin_cock",
         author           = "Will Breaden Madden",
