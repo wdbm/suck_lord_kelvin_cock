@@ -5,7 +5,7 @@ This is an automated Wi-Fi login program for the Kelvin Building. It has a store
 # setup
 
 ```Bash
-pip install suck_lord_kelvin_cock
+pip install slokc
 ```
 
 # usage
