@@ -9,7 +9,7 @@ def main():
 
     setuptools.setup(
         name             = "slokc",
-        version          = "2017.07.03.1029",
+        version          = "2018.01.03.2009",
         description      = "Kelvin Building automated Wi-Fi login program",
         long_description = long_description(),
         url              = "https://github.com/wdbm/suck_lord_kelvin_cock",

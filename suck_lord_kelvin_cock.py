@@ -52,7 +52,7 @@ import socket
 import time
 
 name    = "suck_lord_kelvin_cock"
-version = "2017-07-03T1029Z"
+version = "2018-01-03T2009Z"
 
 def main(options):
 
@@ -94,6 +94,18 @@ def main(options):
 def generate_passcode():
 
     passcodes = {
+                    "2018-12": "0ebc11",
+                    "2018-11": "30aaa8",
+                    "2018-10": "dd7c0c",
+                    "2018-09": "793edd",
+                    "2018-08": "ded5d0",
+                    "2018-07": "680e61",
+                    "2018-06": "53336c",
+                    "2018-05": "dfa983",
+                    "2018-04": "867490",
+                    "2018-03": "c49a68",
+                    "2018-02": "635a08",
+                    "2018-01": "914a8a",
                     "2017-12": "7b7281",
                     "2017-11": "f52186",
                     "2017-10": "f24a7b",

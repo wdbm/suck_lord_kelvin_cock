@@ -29,3 +29,7 @@ suck_lord_kelvin_cock.py --help
 ```
 
 ![](https://i.imgur.com/yNKzPh7.png)
+
+# passcodes
+
+A source for passcodes is here: <http://www.physics.gla.ac.uk/dept-only/wlesscodes/>
