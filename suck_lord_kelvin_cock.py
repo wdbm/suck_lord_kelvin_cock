@@ -57,10 +57,11 @@ except:
     from urllib2        import HTTPError
 import uuid
 import socket
+import sys
 import time
 
 name    = "suck_lord_kelvin_cock"
-version = "2018-01-09T1905Z"
+version = "2018-01-09T1935Z"
 
 def main(options):
 
@@ -213,14 +214,14 @@ def login(
     ):
 
     URL  = "http://start.ubuntu.com/wless/index.php"
-    data = urlencode({"pin": passcode, "action": "auth"})
+    data = urlencode({"pin": ustr(passcode), "action": "auth"})
     response = ""
     try:
         print("tryin' a log in --\n    URL: {URL}, passcode: {passcode}".format(
             URL      = URL,
             passcode = passcode
         ))
-        response = urlopen(URL, data, timeout = 7)
+        response = urlopen(URL, data.encode("utf-8"), timeout = 7)
         response = response.read()
     except HTTPError as error_code:
         if error_code == 404:
@@ -238,6 +239,21 @@ def login(
     else:
         print("already logged in or login unsuccessful or some other fucking "
               "error -- kill yourself")
+
+def ustr(text):
+
+    """
+    Convert a string to Python 2 unicode or Python 3 string as appropriate to
+    the version of Python in use.
+    """
+
+    if text is not None:
+        if sys.version_info >= (3, 0):
+            return str(text)
+        else:
+            return unicode(text)
+    else:
+        return text
 
 if __name__ == "__main__":
 
