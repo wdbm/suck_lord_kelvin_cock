@@ -45,14 +45,22 @@ options:
 
 import datetime
 import docopt
-import urllib
-import urllib2
+try:
+    from urllib.parse   import urlencode
+    from urllib.request import urlopen
+    from urllib.error   import URLError
+    from urllib.error   import HTTPError
+except:
+    from urllib         import urlencode
+    from urllib2        import urlopen
+    from urllib2        import URLError
+    from urllib2        import HTTPError
 import uuid
 import socket
 import time
 
 name    = "suck_lord_kelvin_cock"
-version = "2018-01-03T2009Z"
+version = "2018-01-09T1905Z"
 
 def main(options):
 
@@ -60,35 +68,21 @@ def main(options):
         name    = name,
         version = version
     ))
-
     passcode     = options["--passcode"]
     continuously = options["--continuously"]
-
     if not continuously:
-
         if passcode == "none":
-
             passcode = generate_passcode()
-
         login(passcode = passcode)
-    
     else:
-
         if passcode == "none":
-
             passcode = generate_passcode()
-
         print("gonnae check connection every so often an try tae log in if a "
               "cannae connect")
-
         while True:
-
             if not connected():
-
                 login(passcode = passcode)
-
             print("wait for a bit before checking connection again")
-
             time.sleep(300)
 
 def generate_passcode():
@@ -193,40 +187,25 @@ def generate_passcode():
                 }
 
     date_current = datetime.datetime.utcnow().strftime("%Y-%m")
-
     if date_current in passcodes:
-
         return passcodes[date_current]
-
     else:
-
         print("passcode not found -- consult DMT entities\n"
               "fae now, generate pseudorandom passcode in vain hope")
-
         return str(uuid.uuid4())[:6]
 
 def connected():
 
     print("check connection")
-
     try:
-
-        urllib2.urlopen("https://www.google.com", timeout = 7)
-
-    except urllib2.URLError:
-
+        urlopen("https://www.google.com", timeout = 7)
+    except URLError:
         print("naw connection mate")
-
         return False
-
     except socket.timeout:
-
         print("naw connection mate")
-
         return False
-
     print("connection detected -- gaun yerself")
-
     return True
 
 def login(
@@ -234,48 +213,29 @@ def login(
     ):
 
     URL  = "http://start.ubuntu.com/wless/index.php"
-    data = urllib.urlencode({"pin": passcode, "action": "auth"})
-
+    data = urlencode({"pin": passcode, "action": "auth"})
     response = ""
-
     try:
-
         print("tryin' a log in --\n    URL: {URL}, passcode: {passcode}".format(
             URL      = URL,
             passcode = passcode
         ))
-
-        response = urllib2.urlopen(URL, data, timeout = 7)
+        response = urlopen(URL, data, timeout = 7)
         response = response.read()
-
-    except urllib2.HTTPError as error_code:
-
+    except HTTPError as error_code:
         if error_code == 404:
-
             print("error 404 -- already logged in, dicknips?")
-
-    except urllib2.URLError:
-
+    except URLError:
         print("error -- fuck knows")
-
         return False
-
     except socket.timeout:
-
         print("error -- fuck knows")
-
         return False
-
     else:
-
         print("error? -- fuck knows, maybe it's fine")
-
     if "Correct" in response:
-
         print("login successful -- use this power wisely")
-
     else:
-
         print("already logged in or login unsuccessful or some other fucking "
               "error -- kill yourself")
 
