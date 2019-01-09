@@ -59,7 +59,7 @@ import sys
 import time
 
 name        = "suck_lord_kelvin_cock"
-__version__ = "2018-08-08T1407Z"
+__version__ = "2019-01-09T1440Z"
 
 def main(options = docopt.docopt(__doc__)):
     if options["--version"]:
@@ -88,6 +88,17 @@ def main(options = docopt.docopt(__doc__)):
 
 def generate_passcode():
     passcodes = {
+        "2019-12": "0b9aeb",
+        "2019-11": "bc5719",
+        "2019-10": "8a19b4",
+        "2019-09": "4b7244",
+        "2019-07": "5e43f8",
+        "2019-06": "2c649c",
+        "2019-05": "f5c046",
+        "2019-04": "9fc296",
+        "2019-03": "922661",
+        "2019-02": "f3fa0c",
+        "2019-01": "3968fc",
         "2018-12": "0ebc11",
         "2018-11": "30aaa8",
         "2018-10": "dd7c0c",
